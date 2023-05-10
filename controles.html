@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Guía Pokemoito</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+	<header>
+		<h1></h1>
+	</header>
+	<nav id="indice">
+        <ul>
+                        <li><a href="index.html">Inicio</a></li>
+
+			<li><a href="Controles.html">Bingo</a></li>
+			<a href="Reglas Randomlocke.html"></a>
+            <li><a href="Reglas Randomlocke.html">Reglas</a></li>
+
+				<ul class="dropdown-menu">
+					<li>
+						<a href="#" class="dropdown-link" id="pueblo-link">Guía zona por zona</a>
+						<ul class="submenu">
+                             <li><a href="Introducción.html">Introducción</a></li>
+                             <li><a href="Introducción.html">Pueblo del Comienzo</a></li>
+                             <li><a href="Introducción.html">Ruta 1</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-link" id="pueblo-lin1">Guía de Objetos</a>
+						<ul class="submenu">
+						   <li><a href="Introducción.html">Ubicación de todos los Objetos</a></li>
+                             <li><a href="Introducción.html">Bolas de Dragón</a></li>
+                             <li><a href="Introducción.html">Discos y Memorias</a></li>
+						</ul>
+                         <li class="dropdown">
+                <a href="#" class="dropdown-link" id="pueblo-lin2">Lista de Misiones</a>
+						<ul class="submenu">
+							<li><a href="#">Gimnasio Mondongo</a></li>
+                            <li><a href="#">Centro Comercial</a></li>
+						</ul>
+					</li>
+                      <li class="dropdown">
+                <a href="#" class="dropdown-link" id="pueblo-lin3">Otros</a>
+						<ul class="submenu">
+							<li><a href="#">Cueva Rocosa</a></li>
+                            <li><a href="#">Centro Comercial</a></li>
+						</ul>
+					</li>
+				</ul>
+		</ul>
+        </nav>
+<div class="row">
+				<h2></h2>
+				<p></p> 
+				<img src="images/bingo.png">
+				<section id="seccion1">
+				</section>
+		</div>
+
+  <div class="row">
+    <div class="recuadro" data-id="1">
+      Completar todas las misiones secundarias
+    </div>
+    <div class="recuadro" data-id="2">
+      Encontrar todas las cartas de Yugi
+    </div>
+    <div class="recuadro" data-id="3">
+      Completar el juego con menos de 2 Pokemoitos muertos.
+    </div>
+    <div class="recuadro" data-id="4">
+      Conseguir todas las mejoras de las Semillas Senzu
+    </div>
+    <div class="recuadro" data-id="5">
+      Conseguir todos los objetos ocultos
+    </div>
+  </div>
+  <div class="row">
+    <div class="recuadro" data-id="6">
+      Encontrar todas las recetas
+    </div>
+    <div class="recuadro" data-id="7">
+      Invocar a Shenron
+    </div>
+    <div class="recuadro" data-id="8">
+      Encuentra a Skippy
+    </div>
+    <div class="recuadro" data-id="9">
+      Captura todos los Legendarios disponibles
+    </div>
+    <div class="recuadro" data-id="10">
+      Completa la liga sin debilitar a nadie de tu equipo.
+    </div>
+  </div>
+    <div class="row">
+    <div class="recuadro" data-id="11">
+      Encuentra todas las Memorias
+    </div>
+    <div class="recuadro" data-id="12">
+      Fabrica todos los objetos.
+    </div>
+    <div class="recuadro" data-id="13">
+      Supera el Quiz con una puntuación de 7 o más.
+    </div>
+    <div class="recuadro" data-id="14">
+      Derrota a 100 entrenadores.
+    </div>
+    <div class="recuadro" data-id="15">
+      Encuentra 50 Pokemoitos salvajes
+    </div>
+  </div>
+    <div class="row">
+    <div class="recuadro" data-id="16">
+      Haz 20 Megaevoluciones
+    </div>
+    <div class="recuadro" data-id="17">
+      Usa 500 ataques
+    </div>
+    <div class="recuadro" data-id="18">
+      Da 20.000 pasos
+    </div>
+    <div class="recuadro" data-id="19">
+      Captura 35 Pokemoitos
+    </div>
+    <div class="recuadro" data-id="20">
+      Usa 20 Objetos en combate
+    </div>
+  </div>
+    <main>
+                <section id="seccion0">
+				<h2>Premios del Bingo</h2>
+				<p><span style="color: dodgerblue">1 Línea completa : </span> 10 Euros en Just eat. <br><span style="color: dodgerblue">2 Líneas completas : </span> Segundo Premio. <br> <span style="color: red">Bingo </span>  : Premio Final
+                </section>
+  
+			</main>
+
+    
+    
+
+	<script>
+$(document).ready(function() {
+	// Ocultar todos los submenús al cargar la página
+	$(".submenu").hide();
+	
+	// Mostrar el submenú correspondiente cuando se hace clic en un enlace
+	$(".dropdown-link").click(function(e) {
+		e.preventDefault();
+		$(this).next(".submenu").slideToggle();
+	});
+});
+
+// Función para agregar o quitar la clase "verde" al recuadro
+function toggleVerde() {
+  var recuadro = this;
+  var id = recuadro.getAttribute('data-id');
+  
+  if (recuadro.style.backgroundColor === 'green') {
+    recuadro.style.backgroundColor = 'black';
+    localStorage.setItem('recuadro-' + id, 'black');
+  } else {
+    recuadro.style.backgroundColor = 'green';
+    localStorage.setItem('recuadro-' + id, 'green');
+  }
+}
+
+// Agregar el evento "click" a todos los recuadros
+var recuadros = document.querySelectorAll('.recuadro');
+for (var i = 0; i < recuadros.length; i++) {
+  recuadros[i].addEventListener('click', toggleVerde);
+}
+
+// Verificar el estado de los recuadros guardados en el localStorage
+for (var i = 0; i < localStorage.length; i++) {
+  var key = localStorage.key(i);
+  if (key.indexOf('recuadro-') === 0) {
+    var id = key.substring(9);
+    var recuadro = document.querySelector('.recuadro[data-id="' + id + '"]');
+    if (recuadro !== null && localStorage.getItem(key) === 'green') {
+      recuadro.style.backgroundColor = 'green';
+    } else {
+      recuadro.style.backgroundColor = 'black';
+    }
+  }
+}
+
+
+
+
+        
+	</script>
+</body>
+</html>

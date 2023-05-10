@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    	<meta charset="UTF-8">
+
+	<title>Guía Pokemoito</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="js/main.js"></script>
+</head>
+<body>
+	<header>
+		<h1></h1>
+	</header>
+	<nav id="indice">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <a href="Controles.html"></a>
+            <li><a href="Controles.html">Bingo</a></li>
+            <li><a href="Reglas Randomlocke.html">Reglas</a></li>
+        <ul class="dropdown-menu">
+					<li>
+						<a href="#" class="dropdown-link" id="pueblo-link">Guía zona por zona</a>
+						<ul class="submenu">
+                                                        <li><a href="Introducción.html">Introducción</a></li>
+
+                        <a href="Pueblo del Comienzo.html"></a>
+                            <li><a href="Pueblo del Comienzo.html">Pueblo del Comienzo</a></li>
+                            <li><a href="Introducción.html">Ruta 1</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-link" id="pueblo-lin1">Guía de Objetos</a>
+						<ul class="submenu">
+						   <li><a href="Introducción.html">Ubicación de todos los Objetos</a></li>
+                             <li><a href="Introducción.html">Bolas de Dragón</a></li>
+                             <li><a href="Introducción.html">Discos y Memorias</a></li>
+						</ul>
+                         <li class="dropdown">
+                <a href="#" class="dropdown-link" id="pueblo-lin2">Lista de Misiones</a>
+						<ul class="submenu">
+							<li><a href="#">Gimnasio Mondongo</a></li>
+                            <li><a href="#">Centro Comercial</a></li>
+						</ul>
+					</li>
+                      <li class="dropdown">
+                <a href="#" class="dropdown-link" id="pueblo-lin3">Otros</a>
+						<ul class="submenu">
+							<li><a href="#">Cueva Rocosa</a></li>
+                            <li><a href="#">Centro Comercial</a></li>
+						</ul>
+					</li>
+				</ul>
+		</ul>
+        </nav>
+	<div class="container-outer">
+		<div class="container-inner">
+			<main>
+                              <section id="seccion0">
+				<h2>Introducción</h2>
+                                  <img src="images/01.png" alt="Imagen 1" style="width: 30%; margin-right: 10px;"  class="zoomable"> <br><br><br>
+
+                <p>La aventura empezará con una pequeña explicación por parte de Urahara, al terminar, verás que la historia empieza con un Jorgelini de niño.</p><br><br>
+            <img src="images/02.png" alt="Imagen 1" style="width: 30%; margin-right: 10px;" class="zoomable">  
+
+
+                </section>
+                <p>Deberás hablar con tu madre y te echará una buena bronca porque el ordenador funcionará muy mal, y te culpará por usarlo para jugar.
+Te dirá que vayas a jugar fuera, con el vecino. Así que dirígete hacia su casa que se encuentra al lado de la tuya.</p><br><br>
+            <img src="images/03.png" alt="Imagen 1" style="width: 30%; margin-right: 10px;" class="zoomable">  
+                <section id="seccion1">
+					
+                </section>
+				<section id="seccion2">
+					<p>La madre del vecino te dirá que su hijo está castigado y no puede salir a jugar, así que volverás a casa y hablarás con tu madre de nuevo.
+Ella te dirá entonces que vayas a ver al Profesor, que se encuentra en el laboratorio del pueblo, justo al sur de la casa del vecino. </p>
+				</section>
+				<section id="seccion3">
+                    <img src="images/04.png" alt="Imagen 1" style="width: 30%; margin-right: 10px;" class="zoomable">
+                    <p></p>
+				</section>
+
+			</main>
+		</div>
+	</div>
+	<div id="">
+  		<h3></h3>
+  		<ul>
+  		</ul>
+	</div>
+
+ 
+<script src="jquery/jquery-3.6.0.min.js"></script> 
+<script src="js/main.js"></script>
+<script>
+$(document).ready(function() {
+	// Ocultar todos los submenús al cargar la página
+	$(".submenu").hide();
+	
+	// Mostrar el submenú correspondiente cuando se hace clic en un enlace
+	$(".dropdown-link").click(function(e) {
+		e.preventDefault();
+		$(this).next(".submenu").slideToggle();
+	});
+});
+        
+        const zoomableImages = document.querySelectorAll('.zoomable');
+
+zoomableImages.forEach(function (img) {
+  img.addEventListener('click', function () {
+    this.classList.toggle('zoomed');
+  });
+});
+</script>
+
+</body>
+</html>
+

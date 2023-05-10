@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    	<meta charset="UTF-8">
+	<title>Guía Pokemoito</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+	<header>
+		<h1></h1>
+	</header>
+	<nav id="indice">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <a href="Controles.html"></a>
+         <li><a href="Reglas Randomlocke.html">Reglas</a></li>  
+            <li><a href="Controles.html">Bingo</a></li>
+
+			 <ul class="dropdown-menu">
+					<li>
+						<a href="#" class="dropdown-link" id="pueblo-link">Guía zona por zona</a>
+    <ul class="submenu" id="submenu-pueblo" style="display: none;">
+                            <li><a href="Introducción.html">Introducción</a></li>
+
+                        <a href="Pueblo del Comienzo.html"></a>
+                            <li><a href="Pueblo del Comienzo.html">Pueblo del Comienzo</a></li>
+                            <li><a href="Introducción.html">Ruta 1</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-link" id="pueblo-link">Guía de Objetos</a>
+						<ul class="submenu">
+						   <li><a href="Introducción.html">Ubicación de todos los Objetos</a></li>
+                             <li><a href="Introducción.html">Bolas de Dragón</a></li>
+                             <li><a href="Introducción.html">Discos y Memorias</a></li>
+						</ul>
+                         <li class="dropdown">
+                <a href="#" class="dropdown-link" id="pueblo-link">Lista de Misiones</a>
+						<ul class="submenu">
+							<li><a href="#">Gimnasio Mondongo</a></li>
+                            <li><a href="#">Centro Comercial</a></li>
+						</ul>
+					</li>
+                      <li class="dropdown">
+                <a href="#" class="dropdown-link" id="pueblo-link">Otros</a>
+						<ul class="submenu">
+							<li><a href="#">Cueva Rocosa</a></li>
+                            <li><a href="#">Centro Comercial</a></li>
+						</ul>
+					</li>
+				</ul>
+		</ul>
+        </nav>
+	<div class="container-outer">
+		<div class="container-inner">
+			<main>
+                               <section id="seccion0">  <span style="color: black">Nº 1 -</span>
+				<h2>Reglas del Randomlocke</h2><br><br>
+				<p> <span style="color: dodgerblue">Nº 1 -</span> Si un pokemoito es debilitado, se guarda en una caja del PC y no se vuelve a usar.</p><br><br>
+                                   <p> <span style="color: dodgerblue">Nº 2 -</span> La excepción a la regla anterior es conseguir un Revivir, un objeto con poco % de aparición. </p><br><br>
+                                <p> <span style="color: dodgerblue">Nº 3 -</span> Puedes capturar el primer pokemoito que encuentres por Zona (Incluyendo ciudades).  No puedes tener repetidos y si se escapa o muere, pierdes el intento.</p><br><br>
+                 <p> <span style="color: dodgerblue">Nº 4 -</span> Si en algún premio o recompensa te toca un Pokemoito que ya tienes, debes elegir uno de los repetidos para quedarte y liberar al otro.</p><br><br>
+                   <p> <span style="color: dodgerblue">Nº 5 - </span>Los pokemoitos obtenidos de otros entrenadores, premios o recompensas no cuentan como captura en la zona. </p><br><br>
+                        <p> <span style="color: dodgerblue">Nº 6 -</span> En caso de aparecer un Shiny, puede capturarse sin que cuente la captura (Máximo 3).</p><br><br>
+                                                                <p> <span style="color: dodgerblue">Nº 7 -</span> Las medicinas pueden usarse solo durante el combate.</p><br><br>
+
+                                   
+                </section>
+                <section id="seccion1">
+					<h3></h3>
+				</section>
+				<section id="seccion2">
+					<h3></h3>
+				</section>
+				<section id="seccion3">
+					<h3></h3>
+				</section>
+			</main>
+		</div>
+	</div>
+	<div id="">
+  		<h3></h3>
+  		<ul>
+  		</ul>
+	</div>
+
+	<script>
+$(document).ready(function() {
+	// Ocultar todos los submenús al cargar la página
+	$(".submenu").hide();
+	
+	// Mostrar el submenú correspondiente cuando se hace clic en un enlace
+	$(".dropdown-link").click(function(e) {
+		e.preventDefault();
+		$(this).next(".submenu").slideToggle();
+	});
+});
+
+	</script>
+</body>
+</html>
