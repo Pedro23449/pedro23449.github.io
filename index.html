@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    	<meta charset="UTF-8">
+
+	<title>Guía Pokemoito</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+	<header>
+		<h1></h1>
+	</header>
+	<nav id="indice">
+        <ul>
+			<li><a href="Controles.html">Bingo</a></li>
+			<a href="Reglas Randomlocke.html"></a>
+            <li><a href="Reglas Randomlocke.html">Reglas</a></li>
+
+				<ul class="dropdown-menu">
+					<li>
+						<a href="#" class="dropdown-link" id="pueblo-link">Guía zona por zona</a>
+						<ul class="submenu">
+                             <li><a href="Introducción.html">Introducción</a></li>
+                             <a href="Pueblo del Comienzo.html"></a>
+<li><a href="Pueblo del Comienzo.html">Pueblo del Comienzo</a></li>
+                             <li><a href="Introducción.html">Ruta 1</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-link" id="pueblo-lin1">Guía de Objetos</a>
+						<ul class="submenu">
+						   <li><a href="Introducción.html">Ubicación de todos los Objetos</a></li>
+                             <li><a href="Introducción.html">Bolas de Dragón</a></li>
+                             <li><a href="Introducción.html">Discos y Memorias</a></li>
+						</ul>
+                         <li class="dropdown">
+                <a href="#" class="dropdown-link" id="pueblo-lin2">Lista de Misiones</a>
+						<ul class="submenu">
+							<li><a href="#">Gimnasio Mondongo</a></li>
+                            <li><a href="#">Centro Comercial</a></li>
+						</ul>
+					</li>
+                      <li class="dropdown">
+                <a href="#" class="dropdown-link" id="pueblo-lin3">Otros</a>
+						<ul class="submenu">
+							<li><a href="#">Cueva Rocosa</a></li>
+                            <li><a href="#">Centro Comercial</a></li>
+						</ul>
+					</li>
+				</ul>
+		</ul>
+        </nav>
+	<div id="">
+  		<h3></h3>
+                                          <img src="images/n.png" alt="Imagen 1" style="width: 30%; margin-left: 110px;"  class="zoomable">
+                                        <img src="images/J.png" alt="Imagen 1" style="width: 30%; margin-right:-190px;" class="zoomable"> 
+
+  		<ul>
+  		</ul>
+	</div>
+
+	<script>
+$(document).ready(function() {
+	// Ocultar todos los submenús al cargar la página
+	$(".submenu").hide();
+	
+	// Mostrar el submenú correspondiente cuando se hace clic en un enlace
+	$(".dropdown-link").click(function(e) {
+		e.preventDefault();
+		$(this).next(".submenu").slideToggle();
+	});
+});
+
+	</script>
+</body>
+</html>
+
