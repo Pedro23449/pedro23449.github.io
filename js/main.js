@@ -1,27 +1,38 @@
-// Función para guardar el estado del submenú en el almacenamiento local
-function saveSubmenuState(submenuId, isOpen) {
-  localStorage.setItem(submenuId, isOpen ? "open" : "closed");
-}
-
-// Función para cargar y aplicar el estado del submenú desde el almacenamiento local
-function loadSubmenuState(submenuId) {
-  var state = localStorage.getItem(submenuId);
-  var submenu = $("#" + submenuId);
-
-  if (state === "open") {
-    submenu.show();
-  } else {
-    submenu.hide();
-  }
-}
-
 // Ocultar todos los submenús al cargar la página
 $(document).ready(function() {
   $(".submenu").hide();
-  loadSubmenuState("submenu-guia"); // Cargar el estado del submenú de "Guía zona por zona"
-  loadSubmenuState("submenu-objetos"); // Cargar el estado del submenú de "Guía de Objetos"
-  loadSubmenuState("submenu-misiones"); // Cargar el estado del submenú de "Lista de Misiones"
-  loadSubmenuState("submenu-otros"); // Cargar el estado del submenú de "Otros"
+
+  // Cargar el estado del submenú de "Guía zona por zona" y mantenerlo abierto si estás dentro de ese submenú
+  var submenuGuia = $("#submenu-guia");
+  if (submenuGuia.hasClass("active")) {
+    submenuGuia.show();
+  } else {
+    submenuGuia.hide();
+  }
+
+  // Cargar el estado del submenú de "Guía de Objetos" y mantenerlo abierto si estás dentro de ese submenú
+  var submenuObjetos = $("#submenu-objetos");
+  if (submenuObjetos.hasClass("active")) {
+    submenuObjetos.show();
+  } else {
+    submenuObjetos.hide();
+  }
+
+  // Cargar el estado del submenú de "Lista de Misiones" y mantenerlo abierto si estás dentro de ese submenú
+  var submenuMisiones = $("#submenu-misiones");
+  if (submenuMisiones.hasClass("active")) {
+    submenuMisiones.show();
+  } else {
+    submenuMisiones.hide();
+  }
+
+  // Cargar el estado del submenú de "Otros" y mantenerlo abierto si estás dentro de ese submenú
+  var submenuOtros = $("#submenu-otros");
+  if (submenuOtros.hasClass("active")) {
+    submenuOtros.show();
+  } else {
+    submenuOtros.hide();
+  }
 
   // Mostrar u ocultar los submenús según el enlace clicado
   $(".dropdown-link").click(function(e) {
@@ -38,5 +49,3 @@ $(document).ready(function() {
     }
   });
 });
-
-
