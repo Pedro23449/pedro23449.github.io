@@ -8,6 +8,8 @@
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="js/main.js"></script>
 </head>
+      <style>
+  </style>
 <body>
 	<header>
 		<h1></h1>
@@ -20,8 +22,8 @@
             <li><a href="Reglas Randomlocke.html">Reglas</a></li>
         <ul class="dropdown-menu">
 					<li>
-						<a href="#" class="dropdown-link" id="pueblo-link">Guía zona por zona</a>
-						<ul class="submenu">
+						<a href="#" class="dropdown-link" id="Guia">Guía zona por zona</a>
+    <ul class="submenu" id="submenu-guia">
                                                         <li><a href="Introducción.html">Introducción</a></li>
 
                         <a href="Pueblo del Comienzo.html"></a>
@@ -30,22 +32,22 @@
 						</ul>
 					</li>
 					<li class="dropdown">
-						<a href="#" class="dropdown-link" id="pueblo-lin1">Guía de Objetos</a>
-						<ul class="submenu">
+						<a href="#" class="dropdown-link" id="Objetos">Guía de Objetos</a>
+    <ul class="submenu" id="submenu-objetos">
 						   <li><a href="Introducción.html">Ubicación de todos los Objetos</a></li>
                              <li><a href="Introducción.html">Bolas de Dragón</a></li>
                              <li><a href="Introducción.html">Discos y Memorias</a></li>
 						</ul>
                          <li class="dropdown">
-                <a href="#" class="dropdown-link" id="pueblo-lin2">Lista de Misiones</a>
-						<ul class="submenu">
+                <a href="#" class="dropdown-link" id="Misiones">Lista de Misiones</a>
+    <ul class="submenu" id="submenu-misiones">
 							<li><a href="#">Gimnasio Mondongo</a></li>
                             <li><a href="#">Centro Comercial</a></li>
 						</ul>
 					</li>
                       <li class="dropdown">
-                <a href="#" class="dropdown-link" id="pueblo-lin3">Otros</a>
-						<ul class="submenu">
+                <a href="#" class="dropdown-link" id="Otros">Otros</a>
+    <ul class="submenu" id="submenu-otros">
 							<li><a href="#">Cueva Rocosa</a></li>
                             <li><a href="#">Centro Comercial</a></li>
 						</ul>
@@ -77,68 +79,32 @@ Ella te dirá entonces que vayas a ver al Profesor, que se encuentra en el labor
 				</section>
 				<section id="seccion3">
                     <img src="images/04.png" alt="Imagen 1" style="width: 30%; margin-right: 10px;" class="zoomable">
-                    <p></p>
+                  <p style="margin-top: 50px;">Podrás hablar con diferentes científicos dentro del Laboratorio, pero el más importante es el Profesor Oak. Este te contará detalles sobre tu hermano, que es un famoso entrenador que desafiará al Líder de la liga ese mismo día, retransmitido en la televisión.<br><br>
+También te propone que vayas a verle cuando cumplas 15 años y te regalará un Pokemoito en ese entonces, para que puedas comenzar tu aventura de Entrenador.</p>
+                                        <img src="images/06.png" alt="Imagen 1" style="width: 30%; margin-right: 10px; margin-top: 50px;" class="zoomable">
+                     <p style="margin-top: 50px;">Te recordará que el combate se verá en televisión y te mandará a casa para que no te lo pierdas, así que irás de nuevo a tu casa para poder ver el famoso combate.</p>
+                                                            <img src="images/07.png" alt="Imagen 1" style="width: 30%; margin-right: 10px; margin-top: 50px;" class="zoomable">
+                                         <p style="margin-top: 50px;">Al llegar a casa notarás un sonido extraño proveniente del ordenador y al comprobarlo, escucharás una voz misteriosa hablándote a través del pc, aunque apenas puedes distinguir las palabras por culpa de las interferencias. <br> <br> 
+Tras unos minutos de interferencias y sonidos extraños, el ordenador expulsará un pendrive y se reiniciará, volviendo a la normalidad. <br> <br> 
+El pendrive se lo llevarás al Profesor, pero primero tienes que ver el combate, así que sube a tu habitación por las escaleras y ponte la TV.</p>
+                                                                                <img src="images/08.png" alt="Imagen 1" style="width: 30%; margin-right: 10px; margin-top: 50px;" class="zoomable">
+
+
+
+
 				</section>
+
+<a href=" Pueblo Del Comienzo.html" style="text-decoration: none;">
+  <div class="speech-bubble-left">
+    <span class="text" style="line-height: 50px; color: white;">Pueblo Del Comienzo</span>
+  </div>
+</a>
+
 
 			</main>
 		</div>
 	</div>
-	<div id="">
-  		<h3></h3>
-  		<ul>
-  		</ul>
-	</div>
-
- 
-<script src="jquery/jquery-3.6.0.min.js"></script> 
-<script src="js/main.js"></script>
 <script>
-$(document).ready(function() {
-	// Ocultar todos los submenús al cargar la página
-	$(".submenu").hide();
-	
-	// Mostrar el submenú correspondiente cuando se hace clic en un enlace
-	$(".dropdown-link").click(function(e) {
-		e.preventDefault();
-		$(this).next(".submenu").slideToggle();
-	});
-});
-        
-        const zoomableImages = document.querySelectorAll('.zoomable');
-
-zoomableImages.forEach(function (img) {
-  img.addEventListener('click', function () {
-    this.classList.toggle('zoomed');
-  });
-});
-    
-        // Obtener el estado del menú desde el almacenamiento local
-    const isMenuOpen = localStorage.getItem('menuOpen');
-
-    // Si el menú estaba abierto previamente, añadir la clase 'active' al menú desplegable
-    if (isMenuOpen === 'true') {
-        document.getElementById('submenu').classList.add('active');
-    }
-
-    // Manejar el evento de clic en el enlace
-    document.getElementById('pueblo-link').addEventListener('click', function (event) {
-        event.preventDefault();
-
-        // Obtener el estado actual del menú desplegable
-        const submenu = document.getElementById('submenu');
-        const isSubMenuOpen = submenu.classList.contains('active');
-
-        // Actualizar el estado y guardarlo en el almacenamiento local
-        const newMenuState = !isSubMenuOpen;
-        localStorage.setItem('menuOpen', newMenuState);
-
-        // Actualizar la clase CSS del menú desplegable según el nuevo estado
-        if (newMenuState) {
-            submenu.classList.add('active');
-        } else {
-            submenu.classList.remove('active');
-        }
-    });
 </script>
 
 </body>
