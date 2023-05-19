@@ -95,16 +95,7 @@ p {
   padding-left: 0;
 }
 
-#indice .submenu li::before {
-content: '';
-display: inline-block;
-width: 5px;
-height: 5px;
-margin-right: 10px;
-border: 1px solid red;
-border-radius: 25%; /* Agregar esta línea para hacer un círculo /
-background-color: red; / Agregar esta línea para cambiar el color de fondo */
-}
+
 
 #inicio {
     margin-left: 0;
@@ -122,15 +113,7 @@ ul {
   list-style-type: none;
 }
 
-ul li::before {
-  content: '';
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  margin-right: 10px;
-  border-radius: 50%;
-  background-color: red;
-}
+
 
 
 
@@ -160,6 +143,30 @@ h1, h2, h3 {
     margin-bottom: 60px;
     text-align: center;
 }
+
+
+h4 {
+  color: dodgerblue;
+    font-family: 'Toledo', sans-serif;
+      font-weight: 600;
+
+
+    font-size: 90px;
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+h5 {
+  color: black;
+  font-family: 'Toledo', sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+  margin-bottom: 60px;
+  text-align: center;
+  background-color: red;
+  border-radius: 10px;
+}
+
 
 #seccion0 {
 margin-bottom: 50px;
@@ -439,4 +446,96 @@ margin-top: 50px /* ajusta el valor según la separación que desees */
 
 .text {
   text-align: center;
+}
+
+
+  .table-header {
+    font-family: 'Toledo', sans-serif;
+    color: blue;
+    font-size: 18px;
+    font-weight: normal;
+  }
+
+
+
+
+ul#submenu-misiones li.submenu-mision::before {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background-color: lightgreen;
+}
+
+ul#submenu-objetos li.submenu-item::before {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background-color: blue;
+}
+
+
+li.dropdown a#Objetos::before {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background-color: blue;
+}
+
+ul#submenu-guia li.submenu-guia::before {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background-color: fuchsia;
+}
+
+a#Guia::before {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background-color: fuchsia;
+}
+
+a#misiones::before {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background-color: lightgreen;
+}
+
+a#Otros::before {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background-color: red;
+}
+
+
+.submenu li .dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background-color: red;
 }
