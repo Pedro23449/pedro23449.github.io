@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Ruletilla Pokemoito</title>
+    <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+      <div class="container">
+  <a href="../controles.html" class="boton">Volver</a>
+  <div class="ruleta-container">
+    <div class="ruleta"></div>
+  </div>
+</div>
+
+<div class="jquery-script-clear"></div>
+    <div class="mainbox" id="mainbox">
+      <div class="box" id="box">
+        <div class="box1">
+          <span class="font span1"><b>Funko de<br> Mando y Grogu</b></span>
+          <span class="font span2"><b>GPS Coche</b></span>
+          <span class="font span3"><b>Gráfica NVIDIA <br> 4060 RTX</b></span>
+          <span class="font span4"><b>1 Año de Gimnasio</b></span>
+          <span class="font span5"
+            ><b
+              >Memoria Ram RGB <br>2x8GB</b
+            ></span
+          >
+        </div>
+        <div class="box2">
+          <span class="font span1"><b>Aire acondicionado</b></span>
+          <span class="font span2"
+            ><b
+              >Monitor<br> 2k 170Hz</b
+            ></span
+          >
+          <span class="font span3"><b>Mancuernas <br>de calidad</b></span>
+          <span class="font span4"><b>Pase de batalla LoL</b></span>
+          <span class="font span5"
+            ><b
+              >Ropa (200€)</b
+            ></span
+          >
+        </div>
+      </div>
+      <button class="spin" onclick="spin()">Girar</button> 
+    </div>
+      
+    <audio
+      controls="controls"
+      id="applause"
+      src="./applause.mp3"
+      type="audio/mp3"
+    ></audio>
+    <audio
+      controls="controls"
+      id="wheel"
+      src="./wheel.mp3"
+      type="audio/mp3"
+    ></audio>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="script.js"></script>
+    <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<script>
+try {
+  fetch(new Request("https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js", { method: 'HEAD', mode: 'no-cors' })).then(function(response) {
+    return true;
+  }).catch(function(e) {
+    var carbonScript = document.createElement("script");
+    carbonScript.src = "//cdn.carbonads.com/carbon.js?serve=CK7DKKQU&placement=wwwjqueryscriptnet";
+    carbonScript.id = "_carbonads_js";
+    document.getElementById("carbon-block").appendChild(carbonScript);
+  });
+} catch (error) {
+  console.log(error);
+}
+</script>
+  </body>
+</html>
