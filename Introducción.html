@@ -111,6 +111,34 @@ zoomableImages.forEach(function (img) {
     this.classList.toggle('zoomed');
   });
 });
+    
+        // Obtener el estado del menú desde el almacenamiento local
+    const isMenuOpen = localStorage.getItem('menuOpen');
+
+    // Si el menú estaba abierto previamente, añadir la clase 'active' al menú desplegable
+    if (isMenuOpen === 'true') {
+        document.getElementById('submenu').classList.add('active');
+    }
+
+    // Manejar el evento de clic en el enlace
+    document.getElementById('pueblo-link').addEventListener('click', function (event) {
+        event.preventDefault();
+
+        // Obtener el estado actual del menú desplegable
+        const submenu = document.getElementById('submenu');
+        const isSubMenuOpen = submenu.classList.contains('active');
+
+        // Actualizar el estado y guardarlo en el almacenamiento local
+        const newMenuState = !isSubMenuOpen;
+        localStorage.setItem('menuOpen', newMenuState);
+
+        // Actualizar la clase CSS del menú desplegable según el nuevo estado
+        if (newMenuState) {
+            submenu.classList.add('active');
+        } else {
+            submenu.classList.remove('active');
+        }
+    });
 </script>
 
 </body>
