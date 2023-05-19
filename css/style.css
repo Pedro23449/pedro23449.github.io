@@ -288,6 +288,9 @@ margin-top: 50px /* ajusta el valor según la separación que desees */
 margin-top: 50px /* ajusta el valor según la separación que desees */
 }
 
+#seccion4 {
+margin-top: 50px /* ajusta el valor según la separación que desees */
+}
 
 .recuadro {
   padding: 10px;
@@ -300,4 +303,140 @@ margin-top: 50px /* ajusta el valor según la separación que desees */
 .recuadro.verde {
   background-color: green;
   color: white;
+}
+
+
+    .boton {
+      display: inline-block;
+      width: 60px;
+      height: 60px;
+      background-color: red;
+      color: white;
+      text-decoration: none;
+      border-radius: 50%;
+      font-family: "TOLEDO", sans-serif;
+      font-size: 18px;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .boton:hover {
+      background-color: #333;
+    }
+
+.ruleta-link {
+  display: inline-block;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+
+.arrow-link {
+    display: inline-block;
+    margin: 10px;
+}
+
+.arrow.left {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-right: 12px solid white;
+}
+
+
+
+.arrow.right {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-left: 12px solid white;
+}
+
+
+.speech-bubble {
+  position: relative;
+  background: #2049c5;
+  border-radius: .4em;
+  height: 50px; /* Ajusta la altura deseada */
+  width: 200px; /* Ajusta el ancho deseado */
+  display: flex; /* Activa el modelo flexbox */
+  align-items: center; /* Centra verticalmente */
+  justify-content: center; /* Centra horizontalmente */
+      margin-left: auto; /* Añade esta línea */
+  margin-right: 810px; /* Ajusta el valor según tus necesidades */
+      margin-top: 50px; /* Ajusta el valor según tus necesidades */
+
+}
+
+.speech-bubble:before {
+  content: '';
+  position: absolute;
+  left: 0; /* Cambia "right" por "left" */
+  top: 50%;
+  width: 0;
+  height: 0;
+  border: 25px solid transparent; /* Reduce el tamaño del borde */
+  border-right-color: #2049c5; /* Cambia "border-left-color" por "border-right-color" */
+  border-left: 0; /* Cambia "border-right" por "border-left" */
+  margin-top: -25px; /* Ajusta el margen superior para centrar */
+  margin-left: -22px; /* Cambia "margin-right" por "margin-left" */
+}
+
+.speech-bubble-left {
+  position: relative;
+  background: #2049c5;
+  border-radius: .4em;
+  height: 50px; /* Ajusta la altura deseada */
+  width: 200px; /* Ajusta el ancho deseado */
+  display: flex; /* Activa el modelo flexbox */
+  align-items: center; /* Centra verticalmente */
+  justify-content: center; /* Centra horizontalmente */
+          margin-top: 50px; /* Ajusta el valor según tus necesidades */
+
+}
+
+.speech-bubble-left:before {
+  content: '';
+  position: absolute;
+  right: 0; /* Cambia "left" por "right" */
+  top: 50%;
+  width: 0;
+  height: 0;
+  border: 25px solid transparent; /* Reduce el tamaño del borde */
+  border-left-color: #2049c5; /* Cambia "border-right-color" por "border-left-color" */
+  border-right: 0; /* Cambia "border-left" por "border-right" */
+  margin-top: -25px; /* Ajusta el margen superior para centrar */
+  margin-right: -23px; /* Cambia "margin-left" por "margin-right" */
+}
+
+
+.speech-bubble,
+.speech-bubble-left {
+  display: inline-block;
+  vertical-align: top; /* Ajusta la alineación vertical según tus necesidades */
+  margin-right: 10px; /* Ajusta el margen derecho según tus necesidades */
+}
+
+.image-with-text {
+  display: flex;
+  align-items: center;
+}
+
+.image {
+  width: 30%;
+  margin-right: 10px;
+  margin-left: 150px; /* Ajusta el valor según tus necesidades */
+  margin-top: 50px;
+}
+
+
+
+.text {
+  text-align: center;
 }
